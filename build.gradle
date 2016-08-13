@@ -1,7 +1,10 @@
 group 'com.implimentz'
-version '0.0.1'
+version '0.0.2'
 
 apply plugin: 'java'
+
+sourceCompatibility = 1.6
+
 
 buildscript {
 
@@ -26,7 +29,7 @@ ext {
     libraryDescription = 'Unsafe wrapper for android'
     siteUrl = 'https://github.com/iamironz/unsafe'
     gitUrl = 'https://github.com/iamironz/unsafe'
-    libraryVersion = '0.0.1'
+    libraryVersion = '0.0.2'
     developerId = 'iamironz'
     developerName = 'Alexander Efremenkov'
     developerEmail = 'implimentz@gmail.com'

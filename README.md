@@ -22,6 +22,12 @@ repositories {
 }
 ```
 
+And after it you should just add as compile dependency:
+
+```groovy
+compile 'com.implimentz:unsafe:0.0.2'
+```
+
 Using in project:
 -----------------
 
