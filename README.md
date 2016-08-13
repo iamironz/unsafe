@@ -2,7 +2,7 @@
 Documented android unsafe wrapper for using internal `sun.misc.Unsafe` api.
 Android has no `sun.misc.Unsafe` class in standard sdk library. 
 This library solve this problem by using compiled direct access to system class library.
-Use 
+
 
 For more explanation see this articles list:
 
