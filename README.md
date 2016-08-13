@@ -1,7 +1,7 @@
 ##Android unsafe wrapper
 Documented android unsafe wrapper for using internal `sun.misc.Unsafe` api.
 Android has no `sun.misc.Unsafe` class in standard sdk library. 
-This library solve this problem by using compiled direct access to system class library.
+This library solve this problem by using compiled direct access to system class library (without using reflection).
 
 
 ####Use only with experimental proposes and between per-compiled dependency from jcenter because `sun.misc.Unsafe` doesn't included in sdk library!
