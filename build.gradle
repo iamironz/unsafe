@@ -1,0 +1,48 @@
+group 'com.implimentz'
+version '0.0.1'
+
+apply plugin: 'java'
+
+buildscript {
+
+    repositories {
+        mavenCentral()
+        jcenter()
+    }
+
+    dependencies {
+        classpath 'com.android.tools.build:gradle:1.2.3'
+        classpath 'com.jfrog.bintray.gradle:gradle-bintray-plugin:1.4'
+        classpath 'com.github.dcendents:android-maven-gradle-plugin:1.3'
+    }
+}
+
+ext {
+    bintrayRepo = 'maven'
+    bintrayName = 'unsafe'
+    publishedGroupId = 'com.implimentz'
+    libraryName = 'unsafe'
+    artifact = 'unsafe'
+    libraryDescription = 'Unsafe wrapper for android'
+    siteUrl = 'https://github.com/iamironz/unsafe'
+    gitUrl = 'https://github.com/iamironz/unsafe'
+    libraryVersion = '0.0.1'
+    developerId = 'iamironz'
+    developerName = 'Alexander Efremenkov'
+    developerEmail = 'implimentz@gmail.com'
+    licenseName = 'The Apache Software License, Version 2.0'
+    licenseUrl = 'http://www.apache.org/licenses/LICENSE-2.0.txt'
+    allLicenses = ["Apache-2.0"]
+}
+
+repositories {
+    jcenter()
+    mavenCentral()
+}
+
+dependencies {
+
+}
+
+apply from: 'https://raw.githubusercontent.com/nuuneoi/JCenter/master/installv1.gradle'
+apply from: 'https://raw.githubusercontent.com/nuuneoi/JCenter/master/bintrayv1.gradle'
