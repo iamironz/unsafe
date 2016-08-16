@@ -4,7 +4,7 @@ Android has no `sun.misc.Unsafe` class in standard sdk library.
 This library solve this problem by using compiled direct access to system class library (without using reflection).
 
 
-####Use only for experimental proposes and between per-compiled dependency from jcenter because `sun.misc.Unsafe` doesn't included in sdk library!
+####Use only for experimental proposes and between pre-compiled dependency from jcenter because `sun.misc.Unsafe` doesn't included in sdk library!
 
 
 For more explanation see this articles list:
