@@ -15,7 +15,7 @@ For more explanation see this articles list:
 3. https://www.youtube.com/watch?v=FwTkFqJfW8U
 
 
-Adding in project:
+Adding:
 ------------------
 For using in your own projects just add jcenter repository superset:
 
@@ -31,7 +31,7 @@ And after it you should just add as compile dependency:
 compile 'com.implimentz:unsafe:0.0.2'
 ```
 
-Using in project:
+Using:
 -----------------
 
 You should use `UnsafeAndroid` library wrapper class for `Unsafe` class access:
