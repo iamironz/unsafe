@@ -23,7 +23,6 @@ import java.lang.reflect.Field;
 /**
  * Created by Alexander Efremenkov.
  * Date: 13.08.16, 9:32
- * In IntelliJ IDEA 2016.2
  * email: implimentz@gmail.com
  * twitter: iamironz
  * <p>
@@ -326,5 +325,279 @@ public class UnsafeAndroid {
      */
     public void putOrderedObject(Object obj, long offset, Object newValue) {
         unsafe.putOrderedObject(obj, offset, newValue);
+    }
+
+    /**
+     * @since 1.8
+     */
+    public int addressSize() {
+        return unsafe.addressSize();
+    }
+
+    /**
+     * @since 1.8
+     */
+    public int pageSize() {
+        return unsafe.pageSize();
+    }
+
+    /**
+     * @since 1.8
+     */
+    public long allocateMemory(long bytes) {
+        return unsafe.allocateMemory(bytes);
+    }
+
+    /**
+     * @since 1.8
+     */
+    public void freeMemory(long address) {
+        unsafe.freeMemory(address);
+    }
+
+    /**
+     * @since 1.8
+     */
+    public void setMemory(long address, long bytes, byte value) {
+        unsafe.setMemory(address, bytes, value);
+    }
+
+    /**
+     * @since 1.8
+     */
+    public byte getByte(long address) {
+        return unsafe.getByte(address);
+    }
+
+    /**
+     * @since 1.8
+     */
+    public void putByte(long address, byte x) {
+        unsafe.putByte(address, x);
+    }
+
+    /**
+     * @since 1.8
+     */
+    public short getShort(long address) {
+        return unsafe.getShort(address);
+    }
+
+    /**
+     * @since 1.8
+     */
+    public void putShort(long address, short x) {
+        unsafe.putShort(address, x);
+    }
+
+    /**
+     * @since 1.8
+     */
+    public char getChar(long address) {
+        return unsafe.getChar(address);
+    }
+
+    /**
+     * @since 1.8
+     */
+    public void putChar(long address, char x) {
+        unsafe.putChar(address, x);
+    }
+
+    /**
+     * @since 1.8
+     */
+    public int getInt(long address) {
+        return unsafe.getInt(address);
+    }
+
+    /**
+     * @since 1.8
+     */
+    public void putInt(long address, int x) {
+        unsafe.putInt(address, x);
+    }
+
+    /**
+     * @since 1.8
+     */
+    public long getLong(long address) {
+        return unsafe.getLong(address);
+    }
+
+    /**
+     * @since 1.8
+     */
+    public void putLong(long address, long x) {
+        unsafe.putLong(address, x);
+    }
+
+    /**
+     * @since 1.8
+     */
+    public float getFloat(long address) {
+        return unsafe.getFloat(address);
+    }
+
+    /**
+     * @since 1.8
+     */
+    public void putFloat(long address, float x) {
+        unsafe.putFloat(address, x);
+    }
+
+    /**
+     * @since 1.8
+     */
+    public double getDouble(long address) {
+        return unsafe.getDouble(address);
+    }
+
+    /**
+     * @since 1.8
+     */
+    public void putDouble(long address, double x) {
+        unsafe.putDouble(address, x);
+    }
+
+    /**
+     * @since 1.8
+     */
+    public void copyMemory(long srcAddr, long dstAddr, long bytes) {
+        unsafe.copyMemory(srcAddr, dstAddr, bytes);
+    }
+
+    // The following contain CAS-based Java implementations used on
+    // platforms not supporting native instructions
+
+    /**
+     * Atomically adds the given value to the current value of a field
+     * or array element within the given object {@code o}
+     * at the given {@code offset}.
+     *
+     * @param o      object/array to update the field/element in
+     * @param offset field/element offset
+     * @param delta  the value to add
+     * @return the previous value
+     * @since 1.8
+     */
+    // @HotSpotIntrinsicCandidate
+    public int getAndAddInt(Object o, long offset, int delta) {
+        return unsafe.getAndAddInt(o, offset, delta);
+    }
+
+    /**
+     * Atomically adds the given value to the current value of a field
+     * or array element within the given object {@code o}
+     * at the given {@code offset}.
+     *
+     * @param o      object/array to update the field/element in
+     * @param offset field/element offset
+     * @param delta  the value to add
+     * @return the previous value
+     * @since 1.8
+     */
+    // @HotSpotIntrinsicCandidate
+    public long getAndAddLong(Object o, long offset, long delta) {
+        return unsafe.getAndAddLong(o, offset, delta);
+    }
+
+    /**
+     * Atomically exchanges the given value with the current value of
+     * a field or array element within the given object {@code o}
+     * at the given {@code offset}.
+     *
+     * @param o        object/array to update the field/element in
+     * @param offset   field/element offset
+     * @param newValue new value
+     * @return the previous value
+     * @since 1.8
+     */
+    // @HotSpotIntrinsicCandidate
+    public int getAndSetInt(Object o, long offset, int newValue) {
+        return unsafe.getAndSetInt(o, offset, newValue);
+    }
+
+    /**
+     * Atomically exchanges the given value with the current value of
+     * a field or array element within the given object {@code o}
+     * at the given {@code offset}.
+     *
+     * @param o        object/array to update the field/element in
+     * @param offset   field/element offset
+     * @param newValue new value
+     * @return the previous value
+     * @since 1.8
+     */
+    // @HotSpotIntrinsicCandidate
+    public long getAndSetLong(Object o, long offset, long newValue) {
+        return unsafe.getAndSetLong(o, offset, newValue);
+    }
+
+    /**
+     * Atomically exchanges the given reference value with the current
+     * reference value of a field or array element within the given
+     * object {@code o} at the given {@code offset}.
+     *
+     * @param o        object/array to update the field/element in
+     * @param offset   field/element offset
+     * @param newValue new value
+     * @return the previous value
+     * @since 1.8
+     */
+    // @HotSpotIntrinsicCandidate
+    public Object getAndSetObject(Object o, long offset, Object newValue) {
+        return unsafe.getAndSetObject(o, offset, newValue);
+    }
+
+    /**
+     * Ensures that loads before the fence will not be reordered with loads and
+     * stores after the fence; a "LoadLoad plus LoadStore barrier".
+     * <p>
+     * Corresponds to C11 atomic_thread_fence(memory_order_acquire)
+     * (an "acquire fence").
+     * <p>
+     * A pure LoadLoad fence is not provided, since the addition of LoadStore
+     * is almost always desired, and most current hardware instructions that
+     * provide a LoadLoad barrier also provide a LoadStore barrier for free.
+     *
+     * @since 1.8
+     */
+    // @HotSpotIntrinsicCandidate
+    public void loadFence() {
+        unsafe.loadFence();
+    }
+
+    /**
+     * Ensures that loads and stores before the fence will not be reordered with
+     * stores after the fence; a "StoreStore plus LoadStore barrier".
+     * <p>
+     * Corresponds to C11 atomic_thread_fence(memory_order_release)
+     * (a "release fence").
+     * <p>
+     * A pure StoreStore fence is not provided, since the addition of LoadStore
+     * is almost always desired, and most current hardware instructions that
+     * provide a StoreStore barrier also provide a LoadStore barrier for free.
+     *
+     * @since 1.8
+     */
+    // @HotSpotIntrinsicCandidate
+    public void storeFence() {
+        unsafe.storeFence();
+    }
+
+    /**
+     * Ensures that loads and stores before the fence will not be reordered
+     * with loads and stores after the fence.  Implies the effects of both
+     * loadFence() and storeFence(), and in addition, the effect of a StoreLoad
+     * barrier.
+     * <p>
+     * Corresponds to C11 atomic_thread_fence(memory_order_seq_cst).
+     *
+     * @since 1.8
+     */
+    // @HotSpotIntrinsicCandidate
+    public void fullFence() {
+        unsafe.fullFence();
     }
 }
