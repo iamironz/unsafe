@@ -6,7 +6,17 @@ apply plugin: 'java'
 sourceCompatibility = 1.6
 
 ext {
-    version = '0.0.4'
+    version = '0.0.5'
+}
+
+configurations {
+    provided
+}
+
+sourceSets {
+    main {
+        compileClasspath += configurations.provided
+    }
 }
 
 buildscript {
@@ -47,7 +57,7 @@ repositories {
 }
 
 dependencies {
-    compile 'com.google.android:annotations:4.1.1.4'
+    provided 'com.google.android:annotations:4.1.1.4'
 }
 
 apply from: 'https://raw.githubusercontent.com/nuuneoi/JCenter/master/installv1.gradle'
