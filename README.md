@@ -13,6 +13,7 @@ For more explanation see this articles list:
 2. http://mishadoff.com/blog/java-magic-part-4-sun-dot-misc-dot-unsafe
 3. https://www.youtube.com/watch?v=FwTkFqJfW8U
 
+
 Adding:
 ------------------
 For using in your own projects just add jcenter repository superset:
