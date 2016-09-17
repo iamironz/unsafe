@@ -16,6 +16,7 @@
 
 package com.ironz.unsafe;
 
+import android.annotation.TargetApi;
 import sun.misc.Unsafe;
 
 import java.lang.reflect.Field;
@@ -330,6 +331,7 @@ public class UnsafeAndroid {
     /**
      * @since 1.8
      */
+    @TargetApi(24)
     public int addressSize() {
         return unsafe.addressSize();
     }
@@ -337,6 +339,7 @@ public class UnsafeAndroid {
     /**
      * @since 1.8
      */
+    @TargetApi(24)
     public int pageSize() {
         return unsafe.pageSize();
     }
@@ -344,6 +347,7 @@ public class UnsafeAndroid {
     /**
      * @since 1.8
      */
+    @TargetApi(24)
     public long allocateMemory(long bytes) {
         return unsafe.allocateMemory(bytes);
     }
@@ -351,6 +355,7 @@ public class UnsafeAndroid {
     /**
      * @since 1.8
      */
+    @TargetApi(24)
     public void freeMemory(long address) {
         unsafe.freeMemory(address);
     }
@@ -358,6 +363,7 @@ public class UnsafeAndroid {
     /**
      * @since 1.8
      */
+    @TargetApi(24)
     public void setMemory(long address, long bytes, byte value) {
         unsafe.setMemory(address, bytes, value);
     }
@@ -365,6 +371,7 @@ public class UnsafeAndroid {
     /**
      * @since 1.8
      */
+    @TargetApi(24)
     public byte getByte(long address) {
         return unsafe.getByte(address);
     }
@@ -372,6 +379,7 @@ public class UnsafeAndroid {
     /**
      * @since 1.8
      */
+    @TargetApi(24)
     public void putByte(long address, byte x) {
         unsafe.putByte(address, x);
     }
@@ -379,6 +387,7 @@ public class UnsafeAndroid {
     /**
      * @since 1.8
      */
+    @TargetApi(24)
     public short getShort(long address) {
         return unsafe.getShort(address);
     }
@@ -386,6 +395,7 @@ public class UnsafeAndroid {
     /**
      * @since 1.8
      */
+    @TargetApi(24)
     public void putShort(long address, short x) {
         unsafe.putShort(address, x);
     }
@@ -400,6 +410,7 @@ public class UnsafeAndroid {
     /**
      * @since 1.8
      */
+    @TargetApi(24)
     public void putChar(long address, char x) {
         unsafe.putChar(address, x);
     }
@@ -407,6 +418,7 @@ public class UnsafeAndroid {
     /**
      * @since 1.8
      */
+    @TargetApi(24)
     public int getInt(long address) {
         return unsafe.getInt(address);
     }
@@ -414,6 +426,7 @@ public class UnsafeAndroid {
     /**
      * @since 1.8
      */
+    @TargetApi(24)
     public void putInt(long address, int x) {
         unsafe.putInt(address, x);
     }
@@ -421,6 +434,7 @@ public class UnsafeAndroid {
     /**
      * @since 1.8
      */
+    @TargetApi(24)
     public long getLong(long address) {
         return unsafe.getLong(address);
     }
@@ -428,6 +442,7 @@ public class UnsafeAndroid {
     /**
      * @since 1.8
      */
+    @TargetApi(24)
     public void putLong(long address, long x) {
         unsafe.putLong(address, x);
     }
@@ -435,6 +450,7 @@ public class UnsafeAndroid {
     /**
      * @since 1.8
      */
+    @TargetApi(24)
     public float getFloat(long address) {
         return unsafe.getFloat(address);
     }
@@ -442,6 +458,7 @@ public class UnsafeAndroid {
     /**
      * @since 1.8
      */
+    @TargetApi(24)
     public void putFloat(long address, float x) {
         unsafe.putFloat(address, x);
     }
@@ -449,6 +466,7 @@ public class UnsafeAndroid {
     /**
      * @since 1.8
      */
+    @TargetApi(24)
     public double getDouble(long address) {
         return unsafe.getDouble(address);
     }
@@ -456,6 +474,7 @@ public class UnsafeAndroid {
     /**
      * @since 1.8
      */
+    @TargetApi(24)
     public void putDouble(long address, double x) {
         unsafe.putDouble(address, x);
     }
@@ -463,6 +482,7 @@ public class UnsafeAndroid {
     /**
      * @since 1.8
      */
+    @TargetApi(24)
     public void copyMemory(long srcAddr, long dstAddr, long bytes) {
         unsafe.copyMemory(srcAddr, dstAddr, bytes);
     }
@@ -482,6 +502,7 @@ public class UnsafeAndroid {
      * @since 1.8
      */
     // @HotSpotIntrinsicCandidate
+    @TargetApi(24)
     public int getAndAddInt(Object o, long offset, int delta) {
         return unsafe.getAndAddInt(o, offset, delta);
     }
@@ -498,6 +519,7 @@ public class UnsafeAndroid {
      * @since 1.8
      */
     // @HotSpotIntrinsicCandidate
+    @TargetApi(24)
     public long getAndAddLong(Object o, long offset, long delta) {
         return unsafe.getAndAddLong(o, offset, delta);
     }
@@ -514,6 +536,7 @@ public class UnsafeAndroid {
      * @since 1.8
      */
     // @HotSpotIntrinsicCandidate
+    @TargetApi(24)
     public int getAndSetInt(Object o, long offset, int newValue) {
         return unsafe.getAndSetInt(o, offset, newValue);
     }
@@ -530,6 +553,7 @@ public class UnsafeAndroid {
      * @since 1.8
      */
     // @HotSpotIntrinsicCandidate
+    @TargetApi(24)
     public long getAndSetLong(Object o, long offset, long newValue) {
         return unsafe.getAndSetLong(o, offset, newValue);
     }
@@ -546,6 +570,7 @@ public class UnsafeAndroid {
      * @since 1.8
      */
     // @HotSpotIntrinsicCandidate
+    @TargetApi(24)
     public Object getAndSetObject(Object o, long offset, Object newValue) {
         return unsafe.getAndSetObject(o, offset, newValue);
     }
@@ -564,6 +589,7 @@ public class UnsafeAndroid {
      * @since 1.8
      */
     // @HotSpotIntrinsicCandidate
+    @TargetApi(24)
     public void loadFence() {
         unsafe.loadFence();
     }
@@ -582,6 +608,7 @@ public class UnsafeAndroid {
      * @since 1.8
      */
     // @HotSpotIntrinsicCandidate
+    @TargetApi(24)
     public void storeFence() {
         unsafe.storeFence();
     }
@@ -597,6 +624,7 @@ public class UnsafeAndroid {
      * @since 1.8
      */
     // @HotSpotIntrinsicCandidate
+    @TargetApi(24)
     public void fullFence() {
         unsafe.fullFence();
     }
