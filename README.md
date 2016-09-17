@@ -24,7 +24,7 @@ repositories {
 And after it you should just add as compile dependency:
 
 ```java
-compile 'com.implimentz:unsafe:0.0.4'
+compile 'com.implimentz:unsafe:0.0.5'
 ```
 
 Using:
