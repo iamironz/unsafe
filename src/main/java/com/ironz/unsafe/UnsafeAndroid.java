@@ -380,8 +380,8 @@ public class UnsafeAndroid {
      * @since 1.8
      */
     @TargetApi(24)
-    public void putByte(long address, byte x) {
-        unsafe.putByte(address, x);
+    public void putByte(Object obj, long offset, byte newValue) {
+        unsafe.putByte(obj, offset, newValue);
     }
 
     /**
@@ -396,8 +396,8 @@ public class UnsafeAndroid {
      * @since 1.8
      */
     @TargetApi(24)
-    public void putShort(long address, short x) {
-        unsafe.putShort(address, x);
+    public void putShort(Object obj, long offset, short newValue) {
+        unsafe.putShort(obj, offset, newValue);
     }
 
     /**
@@ -411,8 +411,8 @@ public class UnsafeAndroid {
      * @since 1.8
      */
     @TargetApi(24)
-    public void putChar(long address, char x) {
-        unsafe.putChar(address, x);
+    public void putChar(Object obj, long offset, char newValue) {
+        unsafe.putChar(obj, offset, newValue);
     }
 
     /**
@@ -427,24 +427,8 @@ public class UnsafeAndroid {
      * @since 1.8
      */
     @TargetApi(24)
-    public void putInt(long address, int x) {
-        unsafe.putInt(address, x);
-    }
-
-    /**
-     * @since 1.8
-     */
-    @TargetApi(24)
     public long getLong(long address) {
         return unsafe.getLong(address);
-    }
-
-    /**
-     * @since 1.8
-     */
-    @TargetApi(24)
-    public void putLong(long address, long x) {
-        unsafe.putLong(address, x);
     }
 
     /**
@@ -459,8 +443,8 @@ public class UnsafeAndroid {
      * @since 1.8
      */
     @TargetApi(24)
-    public void putFloat(long address, float x) {
-        unsafe.putFloat(address, x);
+    public void putFloat(Object obj, long offset, float newValue) {
+        unsafe.putFloat(obj, offset, newValue);
     }
 
     /**
@@ -475,8 +459,8 @@ public class UnsafeAndroid {
      * @since 1.8
      */
     @TargetApi(24)
-    public void putDouble(long address, double x) {
-        unsafe.putDouble(address, x);
+    public void putDouble(Object obj, long offset, double newValue) {
+        unsafe.putDouble(obj, offset, newValue);
     }
 
     /**
