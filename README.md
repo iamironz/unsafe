@@ -16,15 +16,15 @@ Adding:
 ------------------
 For using in your own projects just add jcenter repository superset:
 
-```java
+```groovy
 repositories {
     jcenter()
 }
 ```
 And after it you should just add as compile dependency:
 
-```java
-compile 'com.implimentz:unsafe:0.0.5'
+```groovy
+compile 'com.implimentz:unsafe:0.0.6'
 ```
 
 Using:
