@@ -1,5 +1,5 @@
 Android unsafe wrapper (Experimental)
-======================
+=====================================
 
 Documented android unsafe wrapper for using internal `sun.misc.Unsafe` api.
 Android has no `sun.misc.Unsafe` class in standard sdk library.
@@ -13,7 +13,7 @@ For more explanation see this articles list:
 2. http://mishadoff.com/blog/java-magic-part-4-sun-dot-misc-dot-unsafe
 
 Adding:
-------------------
+-------
 For using in your own projects just add jcenter repository superset:
 
 ```groovy
@@ -28,7 +28,7 @@ compile 'com.implimentz:unsafe:0.0.6'
 ```
 
 Using:
------------------
+------
 
 You should use `UnsafeAndroid` library wrapper class for `Unsafe` class access:
 
