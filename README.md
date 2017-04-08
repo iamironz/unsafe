@@ -30,7 +30,7 @@ compile 'com.implimentz:unsafe:0.0.6'
 Using:
 ------
 
-You should use `UnsafeAndroid` library wrapper class for `Unsafe` class access:
+You should use `UnsafeAndroid` library class for `Unsafe` class access:
 
 ```java
 final UnsafeAndroid unsafe = new UnsafeAndroid();
