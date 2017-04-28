@@ -27,7 +27,7 @@ And after it you should just add as compile dependency:
 compile 'com.implimentz:unsafe:0.0.6'
 ```
 
-Using:
+Usage:
 ------
 
 You should use `UnsafeAndroid` library class for `Unsafe` class access:
